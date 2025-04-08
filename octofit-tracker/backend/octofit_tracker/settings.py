@@ -130,3 +130,16 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    'https://turbo-broccoli-576677r6r97f4prp-3001.app.github.dev',
+    'https://turbo-broccoli-576677r6r97f4prp-8000.app.github.dev',
+]
+
+# Temporarily allow unauthenticated access for testing purposes
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
